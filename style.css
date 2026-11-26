@@ -1,0 +1,93 @@
+:root {
+  --sky: #e4f0fb;
+  --card: #ffffff;
+  --title: #1b2f5b;
+  --text: #44597f;
+  --accent: #1f6fd1;
+  --hairline: #d3e2f3;
+  --band: #9cc8f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sky: #141b3d;
+    --card: #1e2a55;
+    --title: #e8eef9;
+    --text: #b7c4e3;
+    --accent: #8fbaf3;
+    --hairline: #2c3a6b;
+    --band: #2f3f80;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--text);
+  font: 400 17px/1.6 "Montserrat", -apple-system, system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 16px 32px;
+  flex: 1;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--title);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+h1 {
+  color: var(--title);
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 24px 0 4px;
+}
+
+.date { margin: 0 0 32px; font-size: 15px; }
+
+section {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin: 0 0 16px;
+  border: 1px solid var(--hairline);
+}
+
+h2 {
+  color: var(--title);
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+p { margin: 0 0 12px; }
+p:last-child, ul:last-child { margin-bottom: 0; }
+ul { margin: 0 0 12px; padding-left: 20px; }
+li { margin: 0 0 6px; }
+strong { color: var(--title); font-weight: 600; }
+a { color: var(--accent); }
+
+nav { margin-top: 24px; font-size: 15px; }
+nav a { margin-right: 16px; }
+
+footer {
+  height: 56px;
+  background:
+    radial-gradient(circle at 10% 100%, var(--band) 44px, transparent 45px),
+    radial-gradient(circle at 30% 100%, var(--band) 56px, transparent 57px),
+    radial-gradient(circle at 52% 100%, var(--band) 40px, transparent 41px),
+    radial-gradient(circle at 74% 100%, var(--band) 58px, transparent 59px),
+    radial-gradient(circle at 94% 100%, var(--band) 46px, transparent 47px);
+}
